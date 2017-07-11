@@ -4,6 +4,6 @@ FactoryGirl.define do
     last_name "MyString"
     billing_address "MyString"
     delivery_address "MyString"
-    user nil
+    user_id nil
   end
 end
