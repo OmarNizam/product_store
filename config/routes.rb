@@ -4,6 +4,9 @@ root to: 'products#index'
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users, only: [:show]
+  resources :users, only: [] do
+    resources :cart,only: [:index]
+  end
   resources :products, only: [:index, :show]
+
 end
