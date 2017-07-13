@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
-  before_action :set_product
+
   def show
+  end
+
+  def index
+    @products=Product.all
+    
   end
 
   private
