@@ -1,18 +1,14 @@
 class ProductsController < ApplicationController
 
   def show
+    @product = Product.find(params[:id])
+    @pictures = @product.all_pictures
+
   end
 
   def index
     @products=Product.all
-    
+
   end
-
-  private
-
-  def set_product
-    @product = Product.find(params[:id])
-  end
-
 
 end

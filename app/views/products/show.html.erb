@@ -1,0 +1,6 @@
+<h1>Your chosen product</h1>
+<%= @product.description %>
+<% @product.all_photos.each do |photo| %>
+<%= image_tag photo.image %>
+<% end %>
+<%= @product.price %>
