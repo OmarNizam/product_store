@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
 
   def index
     @products=Product.all
+
     @customer = User.new
   end
 
