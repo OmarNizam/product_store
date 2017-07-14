@@ -1,13 +1,14 @@
 class ProductsController < ApplicationController
-  before_action :set_product
+
   def show
-  end
-
-  private
-
-  def set_product
     @product = Product.find(params[:id])
+    @pictures = @product.all_photos
+    @customer = User.new
   end
 
+  def index
+    @products=Product.all
+    @customer = User.new
+  end
 
 end

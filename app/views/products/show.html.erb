@@ -1,0 +1,8 @@
+<h1>Your chosen product</h1>
+<%= @product.description %>
+<% @product.all_photos.each do |photo| %>
+<%= image_tag photo.image %>
+<% end %>
+<%= @product.price %>
+
+<%= current_user ? (link_to "buy", new_product_cart_path(@product.id)):(link_to "buy", new_user_registration_path) %>

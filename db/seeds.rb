@@ -14,3 +14,5 @@ product3 = Product.create!(name: "Book3", description: "it is a new book3 !!", p
 photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/waqas/image/upload/v1499782986/bb_just_courage_2_uvgdym.jpg", product: product1)
 photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/waqas/image/upload/v1499782985/aba-06_p0sv5x.png", product: product2)
 photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/waqas/image/upload/v1499782986/ruby_on_rails_tutorial_a8w5xt.jpg", product: product3)
+
+cart1 = Cart.create!(user: user1, product: product1)
