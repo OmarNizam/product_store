@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,7 +42,7 @@
                 <%= image_tag product.photos.first.image, :size => "300x350" %>
                 <p><%= link_to product.name, product_path(product.id) %></p>
                 <%= product.price %>
-                <%= current_user ? (link_to "buy", new_product_cart_path(product.id)):(link_to "buy", new_user_registration_path) %>
+                <%= current_user ? (button_to "Add" ,product_carts_path(product.id) , action: "create"):(link_to "buy?", new_user_registration_path) %>
                 <br>
                 <% end %>
                 </a>
@@ -56,3 +57,5 @@
 
     </div>
 </div>
+
+

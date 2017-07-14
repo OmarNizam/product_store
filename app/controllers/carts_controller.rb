@@ -5,10 +5,11 @@ class CartsController < ApplicationController
     @carts = Cart.where(user_id:current_user)
   end
 
-  def new
-    @cart = Cart.new
-    set_product
+  def create
     set_user
+    set_product
+    @cart = Cart.create!(product_id:set_product,user_id:set_user)
+    redirect_to root_path
   end
 
   def update
@@ -17,16 +18,17 @@ class CartsController < ApplicationController
 
 
 
+
 end
 
 
 private
   def set_product
-    @product = Product.find(params[:product_id])
+    params[:product_id]
   end
 
   def set_user
-    @user = current_user
+    @user = current_user.id
   end
 
   def cart_params

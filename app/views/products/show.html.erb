@@ -37,5 +37,9 @@
 <br>
 <%= @product.description %>
 <%= @product.price %>
-<%= current_user ? (link_to "buy", new_product_cart_path(@product.id)):(link_to "buy", new_user_registration_path) %>
+
+
+<%= current_user ? (cartbutton):(link_to "buy?", new_user_registration_path) %>
 <% end %>
+
+
