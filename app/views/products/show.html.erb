@@ -5,4 +5,4 @@
 <% end %>
 <%= @product.price %>
 
-<%= current_user ? (link_to "buy", user_cart_index_path(current_user)):(link_to "buy", new_user_registration_path) %>
+<%= current_user ? (link_to "buy", new_product_cart_path(@product.id)):(link_to "buy", new_user_registration_path) %>
